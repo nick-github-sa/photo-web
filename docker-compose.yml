@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - /home/lab/html/photos:/usr/share/nginx/html/photos
+      - /home/lab/pass:/etc/nginx/pass
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
